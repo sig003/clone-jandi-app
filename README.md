@@ -1,7 +1,7 @@
 ## Explain
 
 It will clone a Tosslab's JANDI service. (https://www.jandi.com/landing/kr)   
-It makes a front end service.
+It makes a frontEnd service.
 
 ## Development Stack
 
