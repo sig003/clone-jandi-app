@@ -9,8 +9,12 @@
 }
 
 .sign-in-box {
-  width: 25rem;
+  width: 25.3rem;
+  height: 23rem;
   border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .sign-in-wrapper > div > div > button {
@@ -20,7 +24,7 @@
   outline: none;
   border: 0;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
@@ -28,4 +32,7 @@
 
 .sign-in-input {
   width: 100%;
+  height: 3rem;
+  border-radius: 0.3rem;
+  border: 1px solid #e0e4ed;
 }
