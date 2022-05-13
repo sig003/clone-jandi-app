@@ -14,6 +14,15 @@ function SignIn() {
           <div>
             <input type='password' name='password' className='sign-in-input' placeholder='비밀번호' />
           </div>
+          <fieldset>
+            <div>
+              <input type='checkbox' />
+              <label>이메일 기억하기</label>
+              <input type='checkbox' />
+              <label>로그인 상태유지</label>
+              <a>비밀번호 찾기</a>
+            </div>
+          </fieldset>
           <div>
             <button>로그인</button>
           </div>
