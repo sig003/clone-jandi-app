@@ -21,13 +21,13 @@ function SignIn() {
             <fieldset>
               <div className='sign-in-form'>
                 <div>
-                  <input type='checkbox' />
-                  <label>
+                  <input type='checkbox' id='rememberEmail' />
+                  <label for='rememberEmail'>
                     <span>이메일 기억하기</span>
                   </label>
                   <input type='checkbox' />
                   <label>
-                    <span>로그인 상태유지</span>
+                    <span>로그인 상태 유지</span>
                   </label>
                 </div>
                 <div>
@@ -38,7 +38,7 @@ function SignIn() {
             <div>
               <button>로그인</button>
             </div>
-            <section>잔디가 처음이신가요? 회원가입</section>
+            <section>잔디가 처음이신가요? <span>회원가입</span></section>
           </div>
         </div>
       </main>
