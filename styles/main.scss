@@ -3,6 +3,9 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 @import 'signin';
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   padding: 0;
@@ -13,4 +16,8 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+fieldset {
+  border: none;
 }

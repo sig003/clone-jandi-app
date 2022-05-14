@@ -37,3 +37,25 @@
   font-size: 1rem;
   padding-left: 1rem;
 }
+
+.sign-in-form {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.sign-in-form > div > label > span {
+  font-size: 0.8rem;
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+}
+
+.sign-in-form > div > a {
+  font-size: 0.8rem;
+  color: rgb(162, 162, 162);
+  font-weight: 400;
+}
+
+.sign-in-form > div > label {
+  margin-right: 1rem;
+}
