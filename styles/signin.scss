@@ -114,3 +114,25 @@
 .sign-in-arrow:before {
   content: ' \2197';
 }
+
+header {
+  text-align: center;
+  height: 3.75rem;
+  font-size: .82rem;
+  background-color: #fff;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  border: 1px solid blue;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  align-items: center;
+  max-width: 78rem;
+  justify-content: flex-start;
+}
+
+.sign-in-logo {
+  margin-right: 1.875rem;
+}
