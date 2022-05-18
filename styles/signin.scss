@@ -125,7 +125,6 @@ header {
 nav {
   height: 100%;
   display: flex;
-  border: 1px solid blue;
   margin: 0 auto;
   padding: 0 1.5rem;
   align-items: center;
@@ -135,4 +134,46 @@ nav {
 
 .sign-in-logo {
   margin-right: 1.875rem;
+}
+
+.sign-in-link-contents {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+} 
+
+.sign-in-link-contents-app {
+  display: flex;
+  gap: 2rem;
+}
+
+.sign-in-arrow-down {
+  display: inline-block;
+  width: 16px;
+  height: 10px;
+  margin-left: 4px;
+  background-image: url(https://cdn.jandi.com/landing/_next/static/media/arrow-down.83d69a5d52df947c39c7e21e3507d825.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.sign-in-new-icon {
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.sign-in-new-icon:before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(https://cdn.jandi.com/landing/_next/static/media/new-mark.352c5399cb21b777a0d1498a22f974ad.svg) no-repeat 50%;
+  background-size: contain;
 }
