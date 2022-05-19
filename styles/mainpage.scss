@@ -1,0 +1,22 @@
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-left {
+  border: 1px solid red;
+  width: 10rem;
+  resize: horizontal;
+  overflow: scroll;
+  max-width: 20%;
+}
+
+.main-center {
+  border: 1px solid blue;
+  width: 100%;
+}
+
+.main-right {
+  border: 1px solid black;
+  width: 3.5rem;
+}
