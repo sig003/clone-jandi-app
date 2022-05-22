@@ -45,7 +45,11 @@ function Main() {
         <div className='main-left-resizer' onMouseDown={startResizing} />
       </div>
       <div className='main-center'>center</div>
-      <div className='main-right'>right</div>
+      <div className='main-right'>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-icon'></i>
+        </div>
+      </div>
     </div>
   );
 }
