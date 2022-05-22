@@ -47,7 +47,34 @@ function Main() {
       <div className='main-center'>center</div>
       <div className='main-right'>
         <div className='main-right-icon-wrapper'>
-          <i className='main-right-menu-icon'></i>
+          <i className='main-right-menu-setting'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-search'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-todo'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-file'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-origanization'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-drive'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-connect'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-favorite'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-mention'></i>
+        </div>
+        <div className='main-right-icon-wrapper'>
+          <i className='main-right-menu-profile'></i>
         </div>
       </div>
     </div>
