@@ -11,29 +11,9 @@
   flex-direction: row;
   flex-grow: 0;
   flex-shrink: 0;
-  border-right: #e9e9e9 1px solid;
-  border: 1px solid red;
   height: 100vh;
   //min-height: 33.875rem;
   //max-height: 43.75rem;
-}
-
-.main-center {
-  border: 1px solid blue;
-  width: 100%;
-}
-
-.main-right {
-  border: 1px solid black;
-  width: 3.5rem;
-  position: absolute;
-  z-index: 600;
-  //min-height: 33.875rem;
-  //max-height: 43.75rem;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .main-left .main-left-resizer {
@@ -52,7 +32,32 @@
   flex: 1;
 }
 
-.main-right-icon-wrapper {
+.main-center {
+  border-left: 1px solid hsl(0, 0%, 80%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.main-right {
+  border-left: 1px solid hsl(0, 0%, 80%);
+  width: 3.5rem;
+  position: absolute;
+  z-index: 600;
+  //min-height: 33.875rem;
+  //max-height: 43.75rem;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-right-icon-circle {
   height: 40px;
   width: 40px;
   font-size: 14px;
@@ -65,6 +70,7 @@
   background-color: #F2F4F8;
   border-radius: 50%;
   z-index: 1;
+  margin: 0.8rem auto;
 }
 
 .main-right-menu-setting {
@@ -84,27 +90,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main-right-icon-top-wrapper {
+  display: table-row;
+  list-style: none;
+}
+
 .main-right-menu-setting:before {
   content: '\e957';
 }
 
-.main-right-menu-search {
-  display: block;
-  text-shadow: 0 1px 0;
-  line-height: inherit;
-  -webkit-transform: scale(1.15,.85) translate(0,0);
-  transform: scale(1.15,.85) translate(0,0);
-  //font-family: icomoon!important;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  display: inline-block;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .main-right-menu-search:before {
   content: '\e960';
+}
+
+.main-center-odaeri {
+  background: center/contain url(https://cdn.jandi.com/app/assets/images/sticker/c768526b.odaeri_entry.png) no-repeat;
+  width: 376px;
+  height: 320px;
+  margin: 0 auto;
 }
