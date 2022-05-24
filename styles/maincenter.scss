@@ -1,0 +1,15 @@
+.main-center {
+  border-left: 1px solid hsl(0, 0%, 80%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-center-odaeri {
+  background: center/contain url(https://cdn.jandi.com/app/assets/images/sticker/c768526b.odaeri_entry.png) no-repeat;
+  width: 376px;
+  height: 320px;
+  margin: 0 auto;
+}

@@ -1,0 +1,28 @@
+.main-left {
+  height: 20rem;
+  min-width: 9.375rem;
+  max-width: 18.75rem;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100vh;
+  //min-height: 33.875rem;
+  //max-height: 43.75rem;
+}
+
+.main-left .main-left-resizer {
+  flex: 0 0 6px;
+  justify-self: flex-end;
+  cursor: col-resize;
+  resize: horizontal;
+}
+
+.main-left .main-left-resizer:hover {
+  width: 3px;
+  background: #c1c3c5b4;
+}
+
+.main-left .main-left-content {
+  flex: 1;
+}
