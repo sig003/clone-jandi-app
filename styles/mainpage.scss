@@ -36,7 +36,9 @@
   border-left: 1px solid hsl(0, 0%, 80%);
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
 }
 
