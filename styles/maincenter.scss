@@ -13,3 +13,17 @@
   height: 320px;
   margin: 0 auto;
 }
+
+.main-center-entry-message {
+  text-align: center;
+  font-size: 16px;
+  line-height: 28px;
+  color: #a2a2a2;
+  span {
+    font-size: 20px;
+    margin: 32px 0;
+    display: block;
+    color: #00c473;
+    font-weight: 700;
+  }
+}
