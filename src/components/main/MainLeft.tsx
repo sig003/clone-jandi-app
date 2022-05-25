@@ -37,7 +37,13 @@ function MainLeft() {
         style={{ width: sidebarWidth }}
         onMouseDown={(e) => e.preventDefault()}
       >
-        <div className="main-left-content">left</div>
+        <div className="main-left-content">
+          <div className="main-left-top-logo-wrapper">
+            <div className="main-left-top-logo">
+              <img ng-src="https://jandi-box.com/teams/0/logo.png?timestamp=20190628" src="https://jandi-box.com/teams/0/logo.png?timestamp=20190628" />
+            </div>
+          </div>
+        </div>
         <div className="main-left-resizer" onMouseDown={startResizing} />
       </div>
     </>
