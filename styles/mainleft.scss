@@ -7,18 +7,17 @@
   flex-grow: 0;
   flex-shrink: 0;
   height: 100vh;
-  //min-height: 33.875rem;
-  //max-height: 43.75rem;
+  border-right: 1px solid hsl(0, 0%, 80%);
 }
 
-.main-left .main-left-resizer {
+.main-left-resizer {
   flex: 0 0 6px;
   justify-self: flex-end;
   cursor: col-resize;
   resize: horizontal;
 }
 
-.main-left .main-left-resizer:hover {
+.main-left-resizer:hover {
   width: 3px;
   background: #c1c3c5b4;
 }
@@ -33,7 +32,7 @@
   align-items: center;
   width: 100%;
   height: 3.375rem;
-  border: 1px solid red;
+  border-bottom: 1px solid hsl(0, 0%, 80%);
   padding-left: 1rem;
 }
 
@@ -51,6 +50,11 @@
   transform: translateX(1px);
   text-align: left;
   box-sizing: border-box;
+  display: flex;
+  font-weight: 600;
+  gap: 1rem;
+  pointer-events: auto!important;
+  cursor: not-allowed!important;
   img {
     width: 2rem;
   }
