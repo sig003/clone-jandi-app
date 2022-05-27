@@ -1,9 +1,8 @@
 .main-left {
-  height: 20rem;
   min-width: 16.375rem;
   max-width: 18.75rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
   height: 100vh;
@@ -23,10 +22,10 @@
 }
 
 .main-left .main-left-content {
-  flex: 1;
+ // flex: 1;
 }
 
-.main-left-top-logo-wrapper {
+@mixin main-left-contents {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -34,6 +33,10 @@
   height: 3.375rem;
   border-bottom: 1px solid hsl(0, 0%, 80%);
   padding-left: 1rem;
+}
+
+.main-left-top-logo-wrapper {
+  @include main-left-contents;
 }
 
 .main-left-top-logo {
@@ -57,5 +60,23 @@
   cursor: not-allowed!important;
   img {
     width: 2rem;
+  }
+}
+
+.main-left-search-button {
+  @include main-left-contents;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  button {
+    height: 32px;
+    border-radius: 16px;
+    background-color: #F2F4F8;
+    color: #65686C;
+    width: 100%;
+    font-weight: 400;
+    text-align: left;
+    padding: 6px 16px;
+    font-size: 12px;
   }
 }

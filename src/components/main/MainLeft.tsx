@@ -45,7 +45,9 @@ function MainLeft() {
             </div>
           </div>
         </div>
-        
+        <div className="main-left-search-button">
+          <button></button>
+        </div>
       </div>
       <div className="main-left-resizer" onMouseDown={startResizing} />
     </>
