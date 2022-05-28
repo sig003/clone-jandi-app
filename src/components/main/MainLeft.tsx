@@ -37,7 +37,7 @@ function MainLeft() {
         style={{ width: sidebarWidth }}
         onMouseDown={(e) => e.preventDefault()}
       >
-        <div className="main-left-content">
+        <div>
           <div className="main-left-top-logo-wrapper">
             <div className="main-left-top-logo">
               <img ng-src="https://jandi-box.com/teams/0/logo.png?timestamp=20190628" src="https://jandi-box.com/teams/0/logo.png?timestamp=20190628" />
@@ -46,7 +46,16 @@ function MainLeft() {
           </div>
         </div>
         <div className="main-left-search-button">
-          <button></button>
+          <button>
+            <i>S</i>
+            <span>토픽 또는 채팅방 검색</span>
+          </button>
+        </div>
+        <div className="main-left-topic">
+          토픽
+        </div>
+        <div className="main-left-chat">
+          채팅
         </div>
       </div>
       <div className="main-left-resizer" onMouseDown={startResizing} />
