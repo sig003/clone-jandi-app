@@ -1,7 +1,7 @@
 //https://dev.to/shaedrizwan/building-custom-hooks-in-react-to-fetch-data-4ig6
 //https://blog.devgenius.io/how-the-pros-fetch-data-react-mastery-63b14e6795df
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useFetchData } from '/src/hooks/useFetchData';
 
 function DataList() {
