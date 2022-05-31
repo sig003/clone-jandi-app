@@ -1,9 +1,19 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import { useQuery } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import axios from 'axios';
 
 function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [signInEnabled, setSignInEnabled] = useState('');
+  /*const { isLoading, error, data, isFetching } = useQuery('fetchData', () =>
+    axios.get('http://13.124.239.220/api/signin').then((res) => {
+        res.data
+      }
+    );
+  );*/
+
 
   const onChangeEmail = useCallback(e => {
     setEmail(e.target.value);

@@ -15,7 +15,7 @@ function DataListReactQuery() {
   return (
     <>	
       <div>userId: {data.userId}</div>
-	  <div>title: {data.title}</div>		
+	    <div>title: {data.title}</div>
       <div>{isFetching ? "Updating..." : ""}</div>
       <ReactQueryDevtools initialIsOpen />
     </>
