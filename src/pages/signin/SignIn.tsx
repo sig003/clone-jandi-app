@@ -3,6 +3,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [signInEnabled, setSignInEnabled] = useState('');
 
   const onChangeEmail = useCallback(e => {
     setEmail(e.target.value);
@@ -13,8 +14,16 @@ function SignIn() {
   },[password]);
 
   const handleClickFormSubmit = () => {
-    console.log(`${email} === ${password}`);
+    
   }
+
+  useEffect(() => {
+    if (email && password) {
+      setSignInEnabled('enabled');
+    } else {
+      setSignInEnabled('');
+    }
+  }, [email, password]);
 
   return (
     <>
@@ -98,7 +107,7 @@ function SignIn() {
                 </div>
               </fieldset>
               <div>
-                <button type="submit" onClick={handleClickFormSubmit}>로그인</button>
+                <button type="submit" onClick={handleClickFormSubmit} className={`${signInEnabled}`}>로그인</button>
               </div>
               <section>잔디가 처음이신가요? <a href="">회원가입</a></section>
             </div>
