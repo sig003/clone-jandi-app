@@ -2,18 +2,19 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import axios from 'axios';
+import { useRouter } from 'next/router'
 
 function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [signInEnabled, setSignInEnabled] = useState('');
-  /*const { isLoading, error, data, isFetching } = useQuery('fetchData', () =>
-    axios.get('http://13.124.239.220/api/signin').then((res) => {
-        res.data
-      }
-    );
-  );*/
-
+  const router = useRouter();
+  const { isLoading, error, data, isFetching } = useQuery('fetchData', () =>
+  axios.get('http://13.124.239.220:3000/api/signin').then((res) => {console.log(res);
+      res.data
+    }
+  )
+);
 
   const onChangeEmail = useCallback(e => {
     setEmail(e.target.value);
@@ -24,15 +25,12 @@ function SignIn() {
   },[password]);
 
   const handleClickFormSubmit = () => {
-    
+    router.push('./main/Main');
   }
 
   useEffect(() => {
-    if (email && password) {
-      setSignInEnabled('enabled');
-    } else {
-      setSignInEnabled('');
-    }
+    const isEnabled = (email && password) ? 'enabled' : '';
+    setSignInEnabled(isEnabled);
   }, [email, password]);
 
   return (
