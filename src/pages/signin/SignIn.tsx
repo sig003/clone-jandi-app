@@ -1,6 +1,7 @@
+//https://2dowon.github.io/docs/react/how-to-use-react-query/
+//https://tkdodo.eu/blog/react-query-and-forms
 import React, { useState, useCallback, useEffect } from 'react';
 import { useQuery } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
 import axios from 'axios';
 import { useRouter } from 'next/router'
 
@@ -9,12 +10,12 @@ function SignIn() {
   const [password, setPassword] = useState('');
   const [signInEnabled, setSignInEnabled] = useState('');
   const router = useRouter();
-  const { isLoading, error, data, isFetching } = useQuery('fetchData', () =>
+  /*const { isLoading, error, data, isFetching } = useQuery('fetchData', () =>
   axios.get('/api/signin').then((res) => {
-      res.data
-    }
-  )
-);
+        res.data
+      }
+    )
+  );*/
 
   const onChangeEmail = useCallback(e => {
     setEmail(e.target.value);
