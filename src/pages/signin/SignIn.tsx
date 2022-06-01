@@ -10,7 +10,7 @@ function SignIn() {
   const [signInEnabled, setSignInEnabled] = useState('');
   const router = useRouter();
   const { isLoading, error, data, isFetching } = useQuery('fetchData', () =>
-  axios.get('http://13.124.239.220:3000/api/signin').then((res) => {console.log(res);
+  axios.get('/api/signin').then((res) => {
       res.data
     }
   )
@@ -24,8 +24,9 @@ function SignIn() {
     setPassword(e.target.value);
   },[password]);
 
-  const handleClickFormSubmit = () => {
-    router.push('./main/Main');
+  const handleClickFormSubmit = (e) => {
+    e.preventDefault();
+    router.push('/main/Main');
   }
 
   useEffect(() => {
