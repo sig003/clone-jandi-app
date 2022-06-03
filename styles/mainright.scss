@@ -53,10 +53,10 @@
   list-style: none;
 }
 
-.main-right-menu-setting:before {
+.main-right-menu-setting::before {
   content: '\e957';
 }
 
-.main-right-menu-search:before {
+.main-right-menu-search::before {
   content: '\e960';
 }

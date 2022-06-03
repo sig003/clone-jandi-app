@@ -85,12 +85,12 @@
   cursor: pointer;
 }
 
-.sign-in-round-checkbox label:before {
+.sign-in-round-checkbox label::before {
   width: 18px;
   height: 18px;
 }
 
-.sign-in-round-checkbox input[type=checkbox]+label:before {
+.sign-in-round-checkbox input[type=checkbox]+label::before {
   position: absolute;
   content: "";
   width: 18px;
@@ -103,7 +103,7 @@
   left: -18px;
 }
 
-.sign-in-round-checkbox input:checked+label:after {
+.sign-in-round-checkbox input:checked+label::after {
   left: -18px;
   top: 0;
   width: 18px;
@@ -112,14 +112,14 @@
   background-position: 50%;
 }
 
-.sign-in-round-checkbox input[type=checkbox]:checked+label:after {
+.sign-in-round-checkbox input[type=checkbox]:checked+label::after {
   background: url(https://cdn.jandi.com/landing/_next/static/media/filled-check-green.335532b07b1f1b741c5f82c9f9012313.png) no-repeat;
   background-position: 50%;
   position: absolute;
   content: "";
 }
 
-.sign-in-arrow:before {
+.sign-in-arrow::before {
   content: ' \2197';
 }
 
@@ -177,7 +177,7 @@ ul {
   margin: 0 4px;
 }
 
-.sign-in-new-icon:before {
+.sign-in-new-icon::before {
   content: "";
   display: inline-block;
   width: 14px;
