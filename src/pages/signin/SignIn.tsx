@@ -1,7 +1,7 @@
 //https://2dowon.github.io/docs/react/how-to-use-react-query/
 //https://tkdodo.eu/blog/react-query-and-forms
 import React, { useState, useCallback, useEffect } from 'react';
-import { useQuery } from 'react-query';
+import { useQuery, useMutation } from 'react-query';
 import axios from 'axios';
 import { useRouter } from 'next/router'
 
@@ -10,12 +10,41 @@ function SignIn() {
   const [password, setPassword] = useState('');
   const [signInEnabled, setSignInEnabled] = useState('');
   const router = useRouter();
+  
   /*const { isLoading, error, data, isFetching } = useQuery('fetchData', () =>
   axios.get('/api/signin').then((res) => {
         res.data
       }
     )
   );*/
+
+  const loginApi = async () => {
+    let response;
+    try {
+      response = await api.get('/api/signin');
+    } catch (error) {
+      console.log(error);
+    }
+    return response;
+  }
+
+
+  const loginMutation = useMutation(loginApi, {
+    onMutate: variable => {
+      console.log("onMutate", variable);
+      // variable : {loginId: 'xxx', password; 'xxx'}
+    },
+    onError: (error, variable, context) => {
+      // error
+    },
+    onSuccess: (data, variables, context) => {
+      router.push('/main/Main');
+      console.log("success", data, variables, context);
+    },
+    onSettled: () => {
+      console.log("end");
+    }
+  });
 
   const onChangeEmail = useCallback(e => {
     setEmail(e.target.value);
@@ -27,7 +56,8 @@ function SignIn() {
 
   const handleClickFormSubmit = (e) => {
     e.preventDefault();
-    router.push('/main/Main');
+    loginMutation.mutate({ email: email, password: password });
+    //router.push('/main/Main');
   }
 
   useEffect(() => {
