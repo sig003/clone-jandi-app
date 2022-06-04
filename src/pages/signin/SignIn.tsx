@@ -1,5 +1,7 @@
 //https://2dowon.github.io/docs/react/how-to-use-react-query/
 //https://tkdodo.eu/blog/react-query-and-forms
+//https://medium.com/@eslamifard.ali/how-to-simply-create-a-private-route-in-next-js-38cab204a99c
+//https://dev.to/shubhamverma/implement-protected-routes-in-nextjs-37ml
 import React, { useState, useCallback, useEffect } from 'react';
 import { useQuery, useMutation } from 'react-query';
 import axios from 'axios';
@@ -10,39 +12,32 @@ function SignIn() {
   const [password, setPassword] = useState('');
   const [signInEnabled, setSignInEnabled] = useState('');
   const router = useRouter();
-  
-  /*const { isLoading, error, data, isFetching } = useQuery('fetchData', () =>
-  axios.get('/api/signin').then((res) => {
-        res.data
-      }
-    )
-  );*/
 
   const loginApi = async () => {
     let response;
     try {
-      response = await api.get('/api/signin');
+      response = await axios.get('/api/signin');
     } catch (error) {
       console.log(error);
     }
     return response;
   }
 
-
   const loginMutation = useMutation(loginApi, {
     onMutate: variable => {
-      console.log("onMutate", variable);
+      //console.log("onMutate", variable);
       // variable : {loginId: 'xxx', password; 'xxx'}
     },
     onError: (error, variable, context) => {
-      // error
+      console.log(error);
     },
     onSuccess: (data, variables, context) => {
+      const token = 'test';
+      sessionStorage.setItem('accessToken', token);
       router.push('/main/Main');
-      console.log("success", data, variables, context);
     },
     onSettled: () => {
-      console.log("end");
+      //console.log("end");
     }
   });
 
@@ -158,4 +153,4 @@ function SignIn() {
   )
 }
 
-export default SignIn
+export default SignIn;

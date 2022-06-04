@@ -2,9 +2,9 @@ import React from 'react';
 import MainLeft from '/src/components/main/MainLeft';
 import MainCenter from '/src/components/main/MainCenter';
 import MainRight from '/src/components/main/MainRight';
+import Auth from '/src/hoc/Auth';
 
 function Main() {
-
 
   return (
     <>
@@ -17,4 +17,4 @@ function Main() {
   );
 }
 
-export default Main
+export default Auth(Main);
