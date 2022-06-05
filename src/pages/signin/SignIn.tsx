@@ -1,7 +1,3 @@
-//https://2dowon.github.io/docs/react/how-to-use-react-query/
-//https://tkdodo.eu/blog/react-query-and-forms
-//https://medium.com/@eslamifard.ali/how-to-simply-create-a-private-route-in-next-js-38cab204a99c
-//https://dev.to/shubhamverma/implement-protected-routes-in-nextjs-37ml
 import React, { useState, useCallback, useEffect } from 'react';
 import { useQuery, useMutation } from 'react-query';
 import axios from 'axios';
@@ -13,17 +9,25 @@ function SignIn() {
   const [signInEnabled, setSignInEnabled] = useState('');
   const router = useRouter();
 
-  const loginApi = async () => {
+  const signInApi = async () => {
     let response;
     try {
-      response = await axios.get('/api/signin');
+      const params = {}; 
+
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        }    
+      };
+      response = await axios.post('/api/signin', params, config);
     } catch (error) {
       console.log(error);
     }
     return response;
   }
 
-  const loginMutation = useMutation(loginApi, {
+  const loginMutation = useMutation(signInApi, {
     onMutate: variable => {
       //console.log("onMutate", variable);
       // variable : {loginId: 'xxx', password; 'xxx'}

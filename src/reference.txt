@@ -1,0 +1,28 @@
+//CSS Entities
+https://www.w3schools.com/cssref/css_entities.asp
+
+//CSS 가상 요소 "::before"와 "::after" 완벽 정리
+https://blogpack.tistory.com/1025
+
+
+//Round Checkbox In Pure CSS
+https://codemyui.com/round-checkbox-pure-css/
+
+//Custom Round Checkbox
+https://gist.github.com/CodeMyUI/58ceada8ffaf5e2c85ccc486802eb299
+
+
+//icomoon icon
+https://icomoon.io/#docs
+https://sonylove.tistory.com/1177
+https://sejiwork.blogspot.com/2021/01/icomoon.html
+
+
+//react-query sign In
+https://codesandbox.io/s/fvvvt?file=/src/components/Register.tsx
+https://kyounghwan01.github.io/blog/React/react-query/basic/#unique-key-%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC
+
+//https://2dowon.github.io/docs/react/how-to-use-react-query/
+//https://tkdodo.eu/blog/react-query-and-forms
+//https://medium.com/@eslamifard.ali/how-to-simply-create-a-private-route-in-next-js-38cab204a99c
+//https://dev.to/shubhamverma/implement-protected-routes-in-nextjs-37ml
