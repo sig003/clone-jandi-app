@@ -32,9 +32,13 @@ function SignIn() {
       console.log(error);
     },
     onSuccess: (data, variables, context) => {
-      const token = 'test';
-      sessionStorage.setItem('accessToken', token);
-      router.push('/main/Main');
+      if (data?.data.result === 'S' && data?.data.token) {
+        const token = data.data.token;
+        sessionStorage.setItem('accessToken', token);
+        router.push('/main/Main');
+      } else {
+        throw new Error('Not exist token.');
+      }
     },
     onSettled: () => {
       //console.log("end");
