@@ -26,3 +26,8 @@ https://kyounghwan01.github.io/blog/React/react-query/basic/#unique-key-%E1%84%9
 //https://tkdodo.eu/blog/react-query-and-forms
 //https://medium.com/@eslamifard.ali/how-to-simply-create-a-private-route-in-next-js-38cab204a99c
 //https://dev.to/shubhamverma/implement-protected-routes-in-nextjs-37ml
+
+Hydration failed because the initial UI does not match what was rendered on the server.
+dispatchEvent
+performConcurrentWorkOnRoot
+Error: There was an error while hydrating. Because the error happened outside of a Suspense boundary, the entire root will switch to client rendering.
