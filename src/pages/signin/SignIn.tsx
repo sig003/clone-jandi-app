@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { useQuery, useMutation } from 'react-query';
+import { useMutation } from 'react-query';
 import axios from 'axios';
 import { useRouter } from 'next/router'
 
