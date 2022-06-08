@@ -109,3 +109,20 @@
   @include main-left-title;
   height: 2.5rem !important;
 }
+
+.main-left-add-icon {
+  font-size: 16px;
+  border-radius: 50%;
+  background: #F2F4F8;
+}
+
+.main-left-add-icon::before {
+  content: "\002b";
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+}

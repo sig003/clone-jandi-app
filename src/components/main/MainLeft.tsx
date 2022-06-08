@@ -52,7 +52,10 @@ function MainLeft() {
           </button>
         </div>
         <div className="main-left-topic">
-          토픽
+          <div>토픽</div>
+          <div className="main-right-icon-circle">
+            <i className="main-left-add-icon"></i>
+          </div>
         </div>
         <div className="main-left-chat">
           채팅
