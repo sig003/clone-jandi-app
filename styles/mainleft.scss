@@ -42,6 +42,12 @@
   line-height: 25px;
 }
 
+@mixin main-left-add-icon-style {
+  height: 2.5rem !important;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
 .main-left-top-logo-wrapper {
   @include main-left-contents;
 }
@@ -101,13 +107,13 @@
 .main-left-topic {
   @include main-left-contents;
   @include main-left-title;
-  height: 2.5rem !important;
+  @include main-left-add-icon-style;
 }
 
 .main-left-chat {
   @include main-left-contents;
   @include main-left-title;
-  height: 2.5rem !important;
+  @include main-left-add-icon-style;
 }
 
 .main-left-add-icon {
@@ -119,10 +125,26 @@
 .main-left-add-icon::before {
   content: "\002b";
   font-style: normal;
+  font-size: 20px;
   font-weight: 400;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
   display: inline-block;
   -webkit-font-smoothing: antialiased;
+}
+
+.main-left-icon-circle {
+  font-size: 16px;
+  border-radius: 50%;
+  background: #F2F4F8;
+  cursor: pointer;
+  i {
+    width: 26px;
+    height: 26px;
+    display: block;
+    line-height: 27px;
+    text-align: center;
+    color: #333;
+  }
 }

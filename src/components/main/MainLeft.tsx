@@ -53,12 +53,15 @@ function MainLeft() {
         </div>
         <div className="main-left-topic">
           <div>토픽</div>
-          <div className="main-right-icon-circle">
+          <div className="main-left-icon-circle">
             <i className="main-left-add-icon"></i>
           </div>
         </div>
         <div className="main-left-chat">
-          채팅
+          <div>채팅</div>
+          <div className="main-left-icon-circle">
+            <i className="main-left-add-icon"></i>
+          </div>
         </div>
       </div>
       <div className="main-left-resizer" onMouseDown={startResizing} />
