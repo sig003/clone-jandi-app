@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 function MainLeft() {
   const sidebarRef = useRef(null);
   const [isResizing, setIsResizing] = useState(false);
   const [sidebarWidth, setSidebarWidth] = useState(268);
+  const [topicClass, setTopicClass] = useState('main-left-topic-panel-close');
   
   const startResizing = useCallback((mouseDownEvent) => {
     setIsResizing(true);
@@ -29,6 +31,14 @@ function MainLeft() {
     };
   }, [resize, stopResizing]);
 
+  const handleClickTopicButton = () => {
+    if (topicClass === 'main-left-topic-panel-close') {
+      setTopicClass('main-left-topic-panel-open');
+    } else {
+      setTopicClass('main-left-topic-panel-close');
+    }
+  }
+useEffect(() => {console.log(topicClass);},[]);
   return (
     <>
       <div 
@@ -47,16 +57,19 @@ function MainLeft() {
         </div>
         <div className="main-left-search-button">
           <button>
-            <i>S</i>
+            <SearchOutlinedIcon fontSize="small"/>
             <span>토픽 또는 채팅방 검색</span>
           </button>
         </div>
-        <div className="main-left-topic">
+        <div className="main-left-topic" onClick={handleClickTopicButton}>
           <div>토픽</div>
           <div className="main-left-icon-circle">
             <i className="main-left-add-icon"></i>
           </div>
         </div>
+        <div className={topicClass}>
+            panel
+          </div>
         <div className="main-left-chat">
           <div>채팅</div>
           <div className="main-left-icon-circle">

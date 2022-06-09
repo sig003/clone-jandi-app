@@ -95,6 +95,9 @@
     font-size: 12px;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   span {
     color: #65686C;
@@ -108,6 +111,17 @@
   @include main-left-contents;
   @include main-left-title;
   @include main-left-add-icon-style;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.main-left-topic-panel-close {
+  display: none;
+  overflow: hidden;
+}
+.main-left-topic-panel-open {
+  display: block;
+  overflow: auto;
 }
 
 .main-left-chat {
