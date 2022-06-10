@@ -122,6 +122,8 @@
 .main-left-topic-panel-open {
   display: block;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-left-chat {

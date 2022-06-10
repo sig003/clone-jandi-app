@@ -38,3 +38,9 @@ https://doodreamcode.tistory.com/211
 
 //CSS Entities
 https://www.w3schools.com/cssref/css_entities.asp
+
+//css accordion
+https://www.w3schools.com/howto/howto_js_accordion.asp
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion
+https://alvarotrigo.com/blog/css-accordion/
+https://codepen.io/alvarotrigo/pen/dyJbqpd
