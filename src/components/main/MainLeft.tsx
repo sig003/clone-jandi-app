@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import SortIcon from '@mui/icons-material/Sort';
 
 function MainLeft() {
   const sidebarRef = useRef(null);
@@ -70,10 +71,16 @@ function MainLeft() {
           </div>
         </div>
         <div className={topicClass}>
-          <div>이름순 폴더생성</div>
-          <div>공지사항</div>
-          <div>업무 자료</div>
-          <div>일정 공유</div>
+          <div className="main-left-topic-order">
+            <div><SortIcon fontSize="small" /> 이름 순</div>
+            <div>폴더생성</div>
+          </div>
+          <div className="main-left-topic-container">
+            <div>공지사항</div>
+            <div>업무 자료</div>
+            <div>일정 공유</div>
+            <div>회의록</div>
+          </div>
         </div>
         <div className="main-left-chat">
           <div>채팅</div>
