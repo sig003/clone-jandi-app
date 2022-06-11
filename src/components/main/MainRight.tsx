@@ -1,4 +1,9 @@
 import React from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
+import LanOutlinedIcon from '@mui/icons-material/LanOutlined';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function MainRight() {
   return (
@@ -7,7 +12,7 @@ function MainRight() {
         <div className="main-right-is-top">
           <ul className="main-right-icon-top-wrapper">
             <li className="main-right-icon-circle">
-              <i className="main-right-menu-setting"></i>
+              <MenuIcon />
             </li>
             <li className="main-right-icon-circle">
               <i className="main-right-menu-search"></i>
@@ -22,7 +27,7 @@ function MainRight() {
               <i className="main-right-menu-origanization"></i>
             </li>
             <li className="main-right-icon-circle">
-              <i className="main-right-menu-drive"></i>
+              <LanOutlinedIcon />
             </li>
             <li className="main-right-icon-circle">
               <i className="main-right-menu-connect"></i>
@@ -31,13 +36,13 @@ function MainRight() {
         </div>
         <div className="main-right-is-bottom">
           <div className="main-right-icon-circle">
-            <i className="main-right-menu-favorite"></i>
+            <StarBorderIcon />
           </div>
           <div className="main-right-icon-circle">
-            <i className="main-right-menu-mention"></i>
+            <AlternateEmailIcon />
           </div>
           <div className="main-right-icon-circle">
-            <i className="main-right-menu-profile"></i>
+            <AccountCircleIcon fontSize="large"/>
           </div>
         </div>
       </div>
