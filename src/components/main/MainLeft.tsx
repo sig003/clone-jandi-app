@@ -2,7 +2,12 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import SortIcon from '@mui/icons-material/Sort';
 
-function MainLeft() {
+interface MainLeftProps {
+  setMode: () => void;
+  mode: string;
+}
+
+function MainLeft({setMode, mode}: MainLeftProps) {
   const sidebarRef = useRef(null);
   const [isResizing, setIsResizing] = useState(false);
   const [sidebarWidth, setSidebarWidth] = useState(268);
@@ -23,15 +28,6 @@ function MainLeft() {
       }
     }, [isResizing]);
   
-  useEffect(() => {
-    window.addEventListener("mousemove", resize);
-    window.addEventListener("mouseup", stopResizing);
-    return () => {
-      window.removeEventListener("mousemove", resize);
-      window.removeEventListener("mouseup", stopResizing);
-    };
-  }, [resize, stopResizing]);
-
   const handleClickLeftMenuAccordion = (state) => {
     if (state === 'topic') {
       if (topicClass === 'main-left-topic-panel-close') {
@@ -41,6 +37,19 @@ function MainLeft() {
       }
     }
   }
+
+  const handleClickMode = (mode) => {
+    setMode(mode);
+  }
+
+  useEffect(() => {
+    window.addEventListener("mousemove", resize);
+    window.addEventListener("mouseup", stopResizing);
+    return () => {
+      window.removeEventListener("mousemove", resize);
+      window.removeEventListener("mouseup", stopResizing);
+    };
+  }, [resize, stopResizing]);
 
   return (
     <>
@@ -76,10 +85,30 @@ function MainLeft() {
             <div>폴더생성</div>
           </div>
           <div className="main-left-topic-container">
-            <div>공지사항</div>
-            <div>업무 자료</div>
-            <div>일정 공유</div>
-            <div>회의록</div>
+            <div 
+              className={mode === 'notice' && "main-left-selected"}
+              onClick={() => handleClickMode('notice')}
+            >
+              <span>공지사항</span>
+            </div>
+            <div
+              className={mode === 'workdata' && "main-left-selected"}
+              onClick={() => handleClickMode('workdata')}
+            >
+              <span>업무 자료</span>
+            </div>
+            <div
+              className={mode === 'schedule' && "main-left-selected"}
+              onClick={() => handleClickMode('schedule')}
+            >
+              <span>일정 공유</span>
+            </div>
+            <div
+              className={mode === 'conference' && "main-left-selected"}
+              onClick={() => handleClickMode('conference')}
+            >
+              <span>회의록</span>
+            </div>
           </div>
         </div>
         <div className="main-left-chat">

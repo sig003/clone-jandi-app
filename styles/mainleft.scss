@@ -190,14 +190,25 @@
   gap: 0.1rem;
   border-bottom: 1px solid hsl(0, 0%, 80%);
   overflow: auto;
+  padding: 0.5rem 0 0.5rem 0;
   div {
     font-size: 14px;
     cursor: pointer;
     color: #333;
     height: 35px;
     padding-top: 10px;
+    span {
+      padding-left: 1.5rem;
+    }
   }
   div:hover {
     background-color: #F2F4F8;
+  }
+}
+
+.main-left-selected {
+  background-color: #F2FCF8;
+  span {
+    color: #00C473;
   }
 }
