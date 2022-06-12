@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MainLeft from '/src/components/main/MainLeft';
 import MainCenter from '/src/components/main/MainCenter';
 import MainRight from '/src/components/main/MainRight';
@@ -14,7 +14,9 @@ function Main() {
           setMode={setMode}
           mode={mode}
         />
-        <MainCenter mode={mode} />
+        <MainCenter 
+          mode={mode} 
+        />
         <MainRight />
       </div>
     </>
