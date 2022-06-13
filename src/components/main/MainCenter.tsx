@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import MainCenterInitialComment from './MainCenterInitialComment';
 import MainCenterNotice from './MainCenterNotice';
 
@@ -6,34 +6,26 @@ interface MainCenterProps {
   mode?: string;
 }
 
-function MainCenterContents(mode: MainCenterProps) {
-  let mainCenterComponents = '';
-
-  switch(mode) {
-    case 'notice':
-      mainCenterComponents = <MainCenterNotice />
-      break;
-    default:
-      mainCenterComponents = <MainCenterNotice />
-
-  }
-}
-
 function MainCenter(mode: MainCenterProps) {
-  let components = '';
+  const [components, setComponents] = useState(<MainCenterInitialComment />);
+ 
+  useEffect(() => {
+    const modeData = mode.mode;
 
-  switch(mode) {
-    case 'notice':
-      components = <MainCenterNotice />
-      break;
-    default:
-      components = '';
+    if (modeData) {
+      switch(modeData) {
+        case 'notice':
+          setComponents(<MainCenterNotice />);
+          break;
+        default:
+          setComponents('');
+      }
+    }
+  }, [mode]);
 
-  }
-console.log(mode);
   return (
     <>
-      {mode !== '' ? <div>{components}</div> : <MainCenterInitialComment />}
+      {components}
     </>
   );
 }
