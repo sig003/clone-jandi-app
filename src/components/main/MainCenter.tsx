@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import MainCenterInitialComment from './MainCenterInitialComment';
+import MainCenterEntryMessage from './MainCenterEntryMessage';
 import MainCenterNotice from './MainCenterNotice';
 
 interface MainCenterProps {
@@ -7,7 +7,7 @@ interface MainCenterProps {
 }
 
 function MainCenter(mode: MainCenterProps) {
-  const [components, setComponents] = useState(<MainCenterInitialComment />);
+  const [components, setComponents] = useState(<MainCenterEntryMessage />);
  
   useEffect(() => {
     const modeData = mode.mode;

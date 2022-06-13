@@ -3,7 +3,7 @@ import React from 'react';
 function MainCenterNotice() {
   return (
     <>
-	  <div>aaaa</div>
+	  <div className="main-center">aaaa</div>
     </>
   );
 }
