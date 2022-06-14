@@ -3,7 +3,11 @@ import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 
 const Home: NextPage = () => {
-  const token = sessionStorage.getItem("accessToken");
+  const [token, setToken] = useState('');
+
+  useEffect(() => {
+    setToken(sessionStorage.getItem("accessToken"));
+  }, []);
   const router = useRouter();
 
   useEffect(() => {
