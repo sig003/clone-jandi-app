@@ -1,12 +1,44 @@
 .main-left {
-  min-width: 16.375rem;
-  max-width: 18.75rem;
+  max-width: 40rem;
   display: flex;
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
   height: 100vh;
+  position: relative;
+}
+
+.resize-bar {
+  width: 5px; 
+  height: 100vh;
+  resize: horizontal;
+  cursor: col-resize; 
+  opacity: 0;
+  overflow: scroll;
+  border: 1px solid red;
+  margin-left: 190px;
+  z-index: 30;
+}
+.resize-line {
+  position: absolute;
+  right: 0; 
+  top: 0; 
+  bottom: 0;
   border-right: 1px solid hsl(0, 0%, 80%);
+  pointer-events: none;
+}
+.resize-bar:hover ~ .resize-line,
+.resize-bar:active ~ .resize-line {
+  background-color:rgba(0,0,0,.04);
+  border-color: #e5e5e5;
+  width: 8px;
+  opacity: 1;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+.resize-bar::-webkit-scrollbar {
+  width: 200px; 
+  height: inherit;
 }
 
 .main-left-resizer {

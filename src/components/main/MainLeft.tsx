@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState } from 'react';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import SortIcon from '@mui/icons-material/Sort';
 
@@ -7,27 +7,9 @@ interface MainLeftProps {
   mode: string;
 }
 
-function MainLeft({setMode, mode}: MainLeftProps) {
-  const sidebarRef = useRef(null);
-  const [isResizing, setIsResizing] = useState(false);
-  const [sidebarWidth, setSidebarWidth] = useState(268);
+function MainLeft({ setMode, mode }: MainLeftProps) {
   const [topicClass, setTopicClass] = useState('main-left-topic-panel-close');
-  
-  const startResizing = useCallback((mouseDownEvent) => {
-    setIsResizing(true);
-  }, []);
-  
-  const stopResizing = useCallback(() => {
-    setIsResizing(false);
-  }, []);
-  
-  const resize = useCallback(
-    (mouseMoveEvent) => {
-      if (isResizing) {
-        setSidebarWidth(mouseMoveEvent.clientX - sidebarRef.current.getBoundingClientRect().left);
-      }
-    }, [isResizing]);
-  
+
   const handleClickLeftMenuAccordion = (state) => {
     if (state === 'topic') {
       if (topicClass === 'main-left-topic-panel-close') {
@@ -42,23 +24,9 @@ function MainLeft({setMode, mode}: MainLeftProps) {
     setMode(mode);
   }
 
-  useEffect(() => {
-    window.addEventListener("mousemove", resize);
-    window.addEventListener("mouseup", stopResizing);
-    return () => {
-      window.removeEventListener("mousemove", resize);
-      window.removeEventListener("mouseup", stopResizing);
-    };
-  }, [resize, stopResizing]);
-
   return (
     <>
-      <div 
-        className="main-left"
-        ref={sidebarRef}
-        style={{ width: sidebarWidth }}
-        onMouseDown={(e) => e.preventDefault()}
-      >
+      <div className="main-left">
         <div>
           <div className="main-left-top-logo-wrapper">
             <div className="main-left-top-logo">
@@ -69,7 +37,7 @@ function MainLeft({setMode, mode}: MainLeftProps) {
         </div>
         <div className="main-left-search-button">
           <button>
-            <SearchOutlinedIcon fontSize="small"/>
+            <SearchOutlinedIcon fontSize="small" />
             <span>토픽 또는 채팅방 검색</span>
           </button>
         </div>
@@ -85,7 +53,7 @@ function MainLeft({setMode, mode}: MainLeftProps) {
             <div>폴더생성</div>
           </div>
           <div className="main-left-topic-container">
-            <div 
+            <div
               className={mode === 'notice' && "main-left-selected"}
               onClick={() => handleClickMode('notice')}
             >
@@ -117,8 +85,9 @@ function MainLeft({setMode, mode}: MainLeftProps) {
             <i className="main-left-add-icon"></i>
           </div>
         </div>
+        <div className="resize-bar"></div>
+        <div className="resize-line"></div>
       </div>
-      <div className="main-left-resizer" onMouseDown={startResizing} />
     </>
   );
 }
